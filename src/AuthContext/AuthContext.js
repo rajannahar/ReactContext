@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
-export const AuthContext = React.createContext(false);
+export const AuthContext = createContext(false);
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setLoggedIn] = React.useState(false);
 
   const login = () => {
@@ -14,10 +14,8 @@ const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ login, logout, isLoggedIn }}>
+    <AuthContext.Provider data-testid="authContext" value={{ login, logout, isLoggedIn }}>
       {children}
     </AuthContext.Provider>
   )
 }
-
-export default AuthProvider;

@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthContext from './AuthContext/AuthContext'
+import { AuthProvider } from './AuthContext/AuthContext'
 
 import LoginStatus from './components/LoginStatus'
 import LoginButton from './components/LoginButton'
@@ -9,12 +9,12 @@ function App() {
   return (
     <div className="App">
       <h1>React Context</h1>
-      <AuthContext>
+      <AuthProvider>
         <LoginStatus />
         <LoginButton />
         <br />
         <LogoutButton />
-      </AuthContext>
+      </AuthProvider>
     </div>
   );
 }

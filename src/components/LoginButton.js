@@ -6,7 +6,7 @@ const LoginButton = () => {
   const status = useContext(AuthContext)
 
   return(
-    <button onClick={() => status.login()}>Login</button>
+    <button data-testid="loginButton" onClick={() => status.login()}>Login</button>
   )
 }
 
