@@ -1,9 +1,9 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const AuthContext = createContext(false);
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setLoggedIn] = React.useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const login = () => {
     setLoggedIn(true)
@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider data-testid="authContext" value={{ login, logout, isLoggedIn }}>
+    <AuthContext.Provider value={{ login, logout, isLoggedIn }}>
       {children}
     </AuthContext.Provider>
   )

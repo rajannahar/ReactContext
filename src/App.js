@@ -6,8 +6,9 @@ import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
 
 function App() {
+
   return (
-    <div className="App">
+    <div className="App" data-testid="appTest">
       <h1>React Context</h1>
       <AuthProvider>
         <LoginStatus />

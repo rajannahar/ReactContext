@@ -2,13 +2,12 @@ import React, {useContext} from 'react'
 import { AuthContext } from '../AuthContext/AuthContext'
 
 const LoginStatus = () => {
-
-  const status = useContext(AuthContext)
-  const {isLoggedIn} = status
-
+  const {isLoggedIn} = useContext(AuthContext)
   return(
     <>
-      <h2>Login status: {isLoggedIn.toString() === "true" ? 'Logged in' : 'Logged out'}</h2>
+      <h2 data-testid="loginStatus" >
+        Login status: {isLoggedIn && isLoggedIn.toString() === "true" ? 'Logged in' : 'Logged out'}
+      </h2>
     </>
   )
 }

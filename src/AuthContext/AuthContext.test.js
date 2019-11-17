@@ -1,25 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react'
-import { getByTestId, queryByTestId, } from '@testing-library/dom'
+import { getByTestId } from '@testing-library/dom'
 import { AuthProvider, AuthContext } from './AuthContext'
 
-
-test('smoke test true', () => {
+test('smoke test', () => {
   expect(true).toBeTruthy()
 })
 
-test('smoke test false', () => {
-  expect(false).toBeFalsy()
-})
-
-
-
-// describe("AuthContext", () => {
-
-//   it("<AuthProvider /> loads", () => {
-//     const {queryByTestId} = render(<AuthProvider />);
-//     // expect(queryByTestId('authContext')).toBeTruthy()
-//   });
-
-// });
+// test('should render logout button', () => {
+//   const { getByTestId } = render(<AuthContext.Provider>test</AuthContext.Provider>)
+//   const authTestId = getByTestId('authContext')
+//   expect(authTestId).toBeTruthy()
+// })
