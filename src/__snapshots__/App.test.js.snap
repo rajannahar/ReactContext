@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+    data-testid="appTest"
+  >
+    <h1>
+      React Context
+    </h1>
+    <h2
+      data-testid="loginStatus"
+    >
+      Login status: Logged out
+    </h2>
+    <button
+      data-testid="loginButton"
+    >
+      Login
+    </button>
+    <br />
+    <button
+      data-testid="logoutButton"
+    >
+      Logout
+    </button>
+  </div>
+</DocumentFragment>
+`;

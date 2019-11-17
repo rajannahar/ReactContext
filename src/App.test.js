@@ -40,3 +40,8 @@ test('click login button should update text', async () => {
   const headingLogin = await waitForElement(() => getByTestId('loginStatus'))
   expect(headingLogin.innerHTML).toEqual('Login status: Logged in')
 })
+
+it("matches snapshot", () => {
+  const { asFragment } = render(<App />);
+  expect(asFragment()).toMatchSnapshot();
+});

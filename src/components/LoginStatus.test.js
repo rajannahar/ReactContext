@@ -13,3 +13,8 @@ test('should have text "Login status: Logged out"', () => {
   const heading = getByTestId('loginStatus')
   expect(heading.innerHTML).toEqual('Login status: Logged out')
 })
+
+it("matches snapshot", () => {
+  const { asFragment } = render(<LoginStatus />);
+  expect(asFragment()).toMatchSnapshot();
+});

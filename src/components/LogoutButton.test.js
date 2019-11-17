@@ -14,3 +14,8 @@ test('should have text "Logout"', () => {
   const button = getByTestId('logoutButton')
   expect(button.innerHTML).toEqual('Logout')
 })
+
+it("matches snapshot", () => {
+  const { asFragment } = render(<LogoutButton />);
+  expect(asFragment()).toMatchSnapshot();
+});

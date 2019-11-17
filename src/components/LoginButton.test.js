@@ -13,3 +13,8 @@ test('should have text "Login"', () => {
   const button = getByText('Login')
   expect(button.innerHTML).toEqual('Login')
 })
+
+it("matches snapshot", () => {
+  const { asFragment } = render(<LoginButton />);
+  expect(asFragment()).toMatchSnapshot();
+});
